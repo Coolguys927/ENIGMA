@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #020b0d;
+    color: #00ff41;
+    font-family: 'VT323', monospace;
+    overflow-x: hidden;
+}
+
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.glitch {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41, 0 0 30px #ff00ff;
+}
+
+.subtitle {
+    font-size: 1.6em;
+    margin: 20px 0 40px;
+    text-shadow: 0 0 10px #00ff41;
+}
+
+.countdown {
+    text-align: center;
+    font-size: 1.8em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-top: 20px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+#timer {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #ff00ff;
+    animation: glitch-effect 1s infinite alternate;
+}
+
+.cta {
+    background: linear-gradient(45deg, #006633, #00ff41);
+    color: black;
+    padding: 15px 35px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes glitch-effect {
+    0% { text-shadow: 0 0 5px #00ccff, 0 0 15px #ff00ff; }
+    100% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ccff; }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
